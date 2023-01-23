@@ -37,3 +37,22 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+Icon
+**/Icon
+Icon?
+**/Icon?
+
+git commit -m ".DS_Store banished!"
+**/.DS_Store
+.DS_Store.DS_Store
+
+scripts/tilewater/archive/Icon
+
+scripts/weather/Icon
+
+output/weather/Icon
