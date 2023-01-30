@@ -3,6 +3,7 @@ library(tidyverse)
 library(readxl)
 library(janitor)
 
+# read in file
 bact.df <- read_excel("data/Data_R.xlsx") %>% clean_names()
 
 bact_long.df <- bact.df %>% 
