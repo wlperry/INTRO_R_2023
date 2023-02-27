@@ -6,7 +6,7 @@ install.packages("ggThemeAssist")
 install.packages("skimr")
 
 # load this library only one time
-library(ggThemeAssist)
+# library(ggThemeAssist)
 
 # Load libraries -----
 library(tidyverse)
@@ -22,9 +22,14 @@ bact.df <- read_csv("data/data_r_long.csv")
 
 # summary stats
 skim(mm.df)
+
 # this is a pipe %>% and moves the dataframe intoe the skim command
 mm.df %>% skim()
 
+# what if you wanted groups of stats based on center?
+mm.df %>% 
+  XXXX %>% 
+  skim()
 
 # so we finished here with making a graph
 ggplot(aes(x=diameter, y=mass, color=color), data=mm.df) +
@@ -36,11 +41,11 @@ mm.df %>%  ggplot(aes(x=diameter, y=mass, color=color)) +
 
 
 
-# what if we wanted to see a plot of MASS  based on the CENTER of m and m
+# what if we wanted to see a plot of *mass*  based on the *cener* of m and m
 mm.df %>%  ggplot(aes(x= XXXX, y=XXXX, color=color)) +
   geom_point()
 
-# 
+
 # we can change this type of plot to show a box and whisker plot - geom_boxplot
 # we can do a variety of other plots - geom_violin
 mm.df %>%  ggplot(aes(x=center, y=mass, color=color)) +
@@ -60,7 +65,7 @@ mm.df %>%  ggplot(aes(x=center, y=mass, color=color)) +
 
 # # # # # # # # # # # #
 # challenge - 
-# what would you change to change the fill?
+# what would you change to change the fill of the symbols?
 ggplot(aes(x=center, y=mass, color=color), data=mm.df) +
   geom_boxplot() +
   scale_color_manual(
