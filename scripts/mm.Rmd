@@ -1,0 +1,44 @@
+---
+title: "R Notebook example"
+output:
+  word_document: default
+  html_notebook: default
+---
+
+```{r}
+library(tidyverse)
+library(readxl)
+```
+
+# This is a markdown document.
+
+## There are different headers.
+
+### and you can do a lot of different things.
+
+-   bullet list
+-   second
+-   third
+-   fourth
+
+or a number list
+
+1.  stuff
+2.  more stuff
+3.  more and more stuff
+
+and we can make a graph
+
+```{r}
+mm.df <- read_csv("data/mms.csv")
+head(mm.df)
+```
+
+### now we can do a plot of data
+
+```{r}
+mm.df %>% 
+  filter(center=="plain") %>% 
+  ggplot(aes(diameter, mass, color = center)) +
+  geom_point()
+```
